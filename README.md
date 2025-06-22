@@ -6,7 +6,9 @@ A role-based web application that simplifies construction site coordination for 
 
 ## 🌐 Deployed On
 
-The application is currently deployed on an **AWS EC2 instance** and accessible via EC2 public IP or domain:
+The application is currently deployed on an **AWS EC2 instance** and accessible via EC2 public IP or domain.
+
+
 My ec2 public IP:http://34.230.91.24/
 
 📦 Features
@@ -33,30 +35,33 @@ Installation Steps
 1. **Clone the Repository**
 
    git clone https://github.com/Anusri30/niti-construction.git
+   
    cd niti-construction
 
-   Upload files to your AWS EC2 using SCP or clone repo directly into EC2.
+2. Upload files to your AWS EC2 using SCP or clone repo directly into EC2.
+   
    Ensure Apache, PHP, and MySQL are installed and configured.
 
-2. **Move Project to Web Directory**
+3. **Move Project to Web Directory**
+   
    sudo mv * /var/www/html/
 
-3. **Set File Permissions**
+4. **Set File Permissions**
    sudo chown -R www-data:www-data /var/www/html/
    sudo chmod -R 755 /var/www/html/
 
-4. **Configure Apache (if needed)**
+5. **Configure Apache (if needed)**
    Ensure Apache is serving /var/www/html and restart:
    sudo systemctl restart apache2
 
-5. **Create the MySQL Database**
+6. **Create the MySQL Database**
    Log in to MySQL and run:
    CREATE DATABASE niti_construction CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
    CREATE USER 'niti_user'@'localhost' IDENTIFIED BY 'password123';
    GRANT ALL PRIVILEGES ON niti_construction.* TO 'niti_user'@'localhost';
    FLUSH PRIVILEGES;
    
-6. **Import Tables**
+7. **Import Tables**
     Import your daily_logs, users, and projects tables using:
     mysql -u niti_user -p niti_construction < db/schema.sql
 
