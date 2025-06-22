@@ -6,8 +6,8 @@ A role-based web application that simplifies construction site coordination for 
 
 ## 🌐 Deployed On
 
-The application is currently deployed on an **AWS EC2 instance** and accessible via your public IP or domain:
-http://34.230.91.24/
+The application is currently deployed on an **AWS EC2 instance** and accessible via EC2 public IP or domain:
+My ec2 public IP:http://34.230.91.24/
 
 📦 Features
 
