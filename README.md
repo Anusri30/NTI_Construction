@@ -52,7 +52,7 @@ Installation Steps
    
    sudo chmod -R 755 /var/www/html/
 
-5.. **Configure Apache (if needed)**
+5. **Configure Apache (if needed)**
 
    Ensure Apache is serving /var/www/html and restart:
    
@@ -113,9 +113,7 @@ Clients see their daily progress summaries.
 
 🏛️ Architecture Overview:
 
-   Frontend (HTML/CSS) → PHP Server (Apache) → MySQL Database
-           ↑                          ↓
-          Role-based dashboards with session handling
+![alt text](ARCHITECTURE.jpg)
 
 🌍 Deployment on AWS EC2 (Amazon Linux)
 
